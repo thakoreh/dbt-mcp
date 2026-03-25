@@ -117,6 +117,9 @@ class DbtMcpSettings(BaseSettings):
         False, alias="DBT_MCP_ENABLE_MCP_SERVER_METADATA"
     )
 
+    # Multi-project settings
+    multi_project_enabled: bool = Field(False, alias="DBT_MCP_MULTI_PROJECT_ENABLED")
+
     # Tracking settings
     do_not_track: str | None = Field(None, alias="DO_NOT_TRACK")
     send_anonymous_usage_data: str | None = Field(
